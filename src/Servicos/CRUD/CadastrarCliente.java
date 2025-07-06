@@ -1,11 +1,10 @@
-package Servicos;
+package Servicos.CRUD;
 
 import ConexaoComApi.ConexaoApi;
 import Modelos.Cliente;
 import Modelos.ListaDeClientes;
+import Servicos.SalvarEmCsv.SalvarClienteEmCsv;
 
-import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class CadastrarCliente {

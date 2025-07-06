@@ -1,4 +1,4 @@
-package Servicos;
+package Servicos.SalvarEmCsv;
 
 import Modelos.Cliente;
 import Modelos.ListaDeClientes;
@@ -6,7 +6,6 @@ import Modelos.ListaDeClientes;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
 
 public class SalvarClienteEmCsv {
 
@@ -30,6 +29,15 @@ public class SalvarClienteEmCsv {
             System.out.println("Clientes salvos com sucesso em " + caminhoArquivo);
         } catch (IOException e) {
             System.err.println("Erro ao salvar clientes: " + e.getMessage());
+        }
+    }
+
+
+    public void abirCsv(String caminhoArquivo) {
+        try {
+            java.awt.Desktop.getDesktop().open(new java.io.File(caminhoArquivo));
+        } catch (IOException e) {
+            System.err.println("Erro ao abrir o arquivo CSV: " + e.getMessage());
         }
     }
 }
